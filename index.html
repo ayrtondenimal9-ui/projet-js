@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon projet de fou</title>
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+            <h1>Mon Gestionnaire des Chicago Bulls</h1>
+            <p>Étape 1 : Manipulation directe du DOM</p>
+        </header>
+
+        <section>
+            <h2>Modifier les informations des joueurs</h2>
+
+            <form id="formulaire-joueur">
+
+                <label for="champ-prenom">Prénom</label>
+                <input type="text" id="champ-prenom" placeholder="Prénom">
+
+                <label for="champ-nom">Nom</label>
+                <input type="text" id="champ-nom" placeholder="Nom">
+
+                <label for="champ-annee">Année</label>
+                <input type="text" id="champ-annee" placeholder="Année">
+
+                <label for="champ-num">Numéro</label>
+                <input type="text" id="champ-num" placeholder="Numéro">
+
+                <label for="champ-poste">Poste</label>
+                <input type="text" id="champ-poste" placeholder="Poste">
+
+                <button type="submit">Modifier joueur</button>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>Aperçu joueur</h2>
+
+            <h3>
+                <span id="apercu-prenom"></span>
+                <span id="apercu-nom"></span>
+            </h3>
+
+            <p>
+                <span id="apercu-annee"></span>
+                <span id="apercu-poste"></span>
+            </p>
+
+            <span id="apercu-num"></span>
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
