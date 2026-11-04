@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #f3f3f3;
+    line-height: 1.5;
+}
+
+header {
+    background-color: #ce1141;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0 0;
+}
+
+main {
+    max-width: 950px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #ce1141;
+    padding-bottom: 8px;
+    font-size: 22px;
+}
+
+.champs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font: inherit;
+}
+
+button {
+    background: #ce1141;
+    color: white;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font: inherit;
+}
+
+button:hover {
+    background: #a20c31;
+}
+
+button.secondaire {
+    background: #444;
+}
+
+button.supprimer {
+    background: #666;
+    font-size: 13px;
+    padding: 6px 10px;
+}
+
+.recherche {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.recherche input {
+    flex: 2;
+}
+
+.recherche select {
+    flex: 1;
+}
+
+#liste-joueurs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.joueur {
+    border: 1px solid #ddd;
+    border-left: 4px solid #ce1141;
+    padding: 12px;
+    background: #fafafa;
+}
+
+.joueur h3 {
+    margin: 0 0 5px;
+}
+
+.joueur p {
+    margin: 4px 0;
+}
+
+.joueur button {
+    margin-top: 8px;
+}
+
+.statistiques {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px 20px;
+}
+
+#message-validation {
+    margin-bottom: 0;
+    color: #a20c31;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+
+    .champs,
+    #liste-joueurs,
+    .statistiques {
+        grid-template-columns: 1fr;
+    }
+
+    .recherche {
+        flex-direction: column;
+    }
+}

@@ -4,47 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Gestionnaire des Chicago Bulls</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <script src="joueur.js" defer></script>
+    <title>Gestionnaire Chicago Bulls</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/main.js"></script>
 </head>
 
 <body>
-    <header class="entete">
-        <img src="https://cdn.nba.com/logos/nba/1610612741/global/L/logo.svg" alt="Logo des Chicago Bulls" class="logo">
-        <div>
-            <h1>MON GESTIONNAIRE DES CHICAGO BULLS</h1>
-        </div>
+    <header>
+        <h1>Chicago Bulls</h1>
+        <p>Gestionnaire de l'effectif</p>
     </header>
 
-    <main class="conteneur">
-        <section class="panneau">
+    <main>
+        <section>
             <h2>Ajouter un joueur</h2>
-
             <form id="formulaire-joueur">
                 <div class="champs">
-                    <div class="champ">
+                    <div>
                         <label for="champ-prenom">Prénom</label>
-                        <input type="text" id="champ-prenom" placeholder="Ex. Michael" required>
+                        <input type="text" id="champ-prenom" required>
                     </div>
-
-                    <div class="champ">
+                    <div>
                         <label for="champ-nom">Nom</label>
-                        <input type="text" id="champ-nom" placeholder="Ex. Jordan" required>
+                        <input type="text" id="champ-nom" required>
                     </div>
-
-                    <div class="champ">
+                    <div>
                         <label for="champ-annee">Année de naissance</label>
-                        <input type="number" id="champ-annee" min="1900" max="2026" placeholder="Ex. 1963" required>
+                        <input type="number" id="champ-annee" min="1940" required>
                     </div>
-
-                    <div class="champ">
-                        <label for="champ-num">Numéro du maillot</label>
-                        <input type="number" id="champ-num" min="0" max="99" placeholder="Ex. 23" required>
+                    <div>
+                        <label for="champ-num">Numéro</label>
+                        <input type="number" id="champ-num" min="0" max="99" required>
                     </div>
-
-                    <div class="champ champ-complet">
+                    <div>
                         <label for="champ-poste">Poste</label>
                         <select id="champ-poste" required>
                             <option value="">Choisir un poste</option>
@@ -56,71 +48,43 @@
                         </select>
                     </div>
                 </div>
-
+                <button type="submit">Ajouter</button>
                 <p id="message-validation" aria-live="polite"></p>
-
-                <button type="submit" id="bouton-ajouter">
-                    Ajouter le joueur
-                </button>
             </form>
         </section>
 
-        <section class="statistiques">
-            <h2>Statistiques de l'effectif</h2>
-
-            <div class="grille-statistiques">
-                <article class="stat-carte">
-                    <span>Joueurs</span>
-                    <strong id="stat-nombre">0</strong>
-                </article>
-
-                <article class="stat-carte">
-                    <span>Âge moyen</span>
-                    <strong id="stat-moyenne">0,00 ans</strong>
-                </article>
-
-                <article class="stat-carte">
-                    <span>Plus jeune</span>
-                    <strong id="stat-jeune">—</strong>
-                </article>
-
-                <article class="stat-carte">
-                    <span>Plus âgé</span>
-                    <strong id="stat-age">—</strong>
-                </article>
-
-                <article class="stat-carte">
-                    <span>Numéro min.</span>
-                    <strong id="stat-numero-min">—</strong>
-                </article>
-
-                <article class="stat-carte">
-                    <span>Numéro max.</span>
-                    <strong id="stat-numero-max">—</strong>
-                </article>
+        <section>
+            <h2>Effectif</h2>
+            <div class="recherche">
+                <input type="search" id="recherche-joueur" placeholder="Rechercher un joueur">
+                <select id="filtre-poste">
+                    <option value="">Tous les postes</option>
+                    <option value="Meneur">Meneur</option>
+                    <option value="Arrière">Arrière</option>
+                    <option value="Ailier">Ailier</option>
+                    <option value="Ailier fort">Ailier fort</option>
+                    <option value="Pivot">Pivot</option>
+                </select>
             </div>
+            <p id="compteur-joueurs"></p>
+            <div id="liste-joueurs"></div>
         </section>
 
-        <section class="effectif">
-            <div class="titre-effectif">
-                <div>
-                    <h2>Effectif des Bulls</h2>
-                    <p id="compteur-joueurs">0 joueur</p>
-                </div>
+        <section>
+            <h2>Statistiques</h2>
+            <div class="statistiques">
+                <p>Nombre de joueurs : <strong id="stat-nombre">0</strong></p>
+                <p>Âge moyen : <strong id="stat-moyenne">-</strong></p>
+                <p>Plus jeune : <strong id="stat-jeune">-</strong></p>
+                <p>Plus âgé : <strong id="stat-age">-</strong></p>
+                <p>Plus petit numéro : <strong id="stat-numero-min">-</strong></p>
+                <p>Plus grand numéro : <strong id="stat-numero-max">-</strong></p>
             </div>
-
-            <label for="recherche-joueur">Rechercher un joueur</label>
-            <input type="search" id="recherche-joueur" placeholder="Prénom, nom ou poste...">
-
-            <p id="message-liste" aria-live="polite"></p>
-
-            <div id="liste-joueurs" class="grille-joueurs"></div>
+            <button id="bouton-reinitialiser" type="button" class="secondaire">Réinitialiser l'effectif</button>
         </section>
     </main>
 
-    <footer>
-        <p>Mon Gestionnaire des Chicago Bulls — Projet JavaScript</p>
-    </footer>
+    <footer>Projet JavaScript - DEUST WMI</footer>
 </body>
 
 </html>

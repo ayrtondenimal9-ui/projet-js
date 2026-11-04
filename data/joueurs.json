@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "prenom": "Michael",
+        "nom": "Jordan",
+        "annee": 1963,
+        "numero": 23,
+        "poste": "Arrière",
+        "dateAjout": "2026-09-01T12:00:00.000Z"
+    },
+    {
+        "id": 2,
+        "prenom": "Scottie",
+        "nom": "Pippen",
+        "annee": 1965,
+        "numero": 33,
+        "poste": "Ailier",
+        "dateAjout": "2026-09-01T12:00:00.000Z"
+    },
+    {
+        "id": 3,
+        "prenom": "Dennis",
+        "nom": "Rodman",
+        "annee": 1961,
+        "numero": 91,
+        "poste": "Ailier fort",
+        "dateAjout": "2026-09-01T12:00:00.000Z"
+    },
+    {
+        "id": 4,
+        "prenom": "Derrick",
+        "nom": "Rose",
+        "annee": 1988,
+        "numero": 1,
+        "poste": "Meneur",
+        "dateAjout": "2026-09-01T12:00:00.000Z"
+    },
+    {
+        "id": 5,
+        "prenom": "Joakim",
+        "nom": "Noah",
+        "annee": 1985,
+        "numero": 13,
+        "poste": "Pivot",
+        "dateAjout": "2026-09-01T12:00:00.000Z"
+    }
+]
